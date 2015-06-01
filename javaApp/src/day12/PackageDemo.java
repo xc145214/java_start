@@ -18,10 +18,10 @@ class PackageDemo {
     public static void main(String[] args) {
 
         //packa.DemoA d = new packa.DemoA();
-        DemoAbc d = new DemoA();
+        DemoA d = new DemoA();
         d.show();
 
-        packb.DemoB b = new packb.DemoB();
+        DemoB b = new DemoB();
         b.method();
         System.out.println("Hello Package!");
     }
