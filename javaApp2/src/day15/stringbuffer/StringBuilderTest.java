@@ -1,4 +1,4 @@
-package day14.stringbuffer;
+package day15.stringbuffer;
 
 /**
  * Created by 川 on 2015/6/1.

@@ -517,6 +517,201 @@ wait 和 sleep 区别？
 	|--在开发时，可以使用匿名内部类来完成局部的路径开辟。
 
 
+## day15
+
+
+## day16
+
+1，学习方法，不要因为一点小问题而导致大技术的学习。
+	学习方法不在于听，而在做，并坚持。
+	作业可以最后一题开始做。节省时间必须要敲代码。
+
+
+2，集合对象的由来和特点。
+
+3，集合和数组的异同点？
+
+4，集合体系由来？
+
+5，必须了解一下顶层集合中的共性方法？
+
+6，迭代器是一个什么玩意？
+
+interface Iterator
+{
+	public abstract boolean hasNext();
+	public abstract Object next();
+}
+interface Collection
+{
+	boolean add();
+	Iterator getIns();
+}
+
+class MyRongqi implements Collection
+{
+	add()
+	{}
+
+	private class hehe implements Iterator
+	{
+		public boolean hasNext(){}
+		public Object next(){}
+	}
+	public Iterator getIns()
+	{
+		return new hehe();
+	}
+
+}
+
+ MyRongqi.hehe a = new MyRongqi().getIns();
+Iterator it = new MyRongqi().getIns();
+
+class MyRongqi2  implements Collection
+{
+	add(){}
+	private class hehe implements Iterator
+	{
+		public boolean hasNext(){}
+		public Object next(){}
+	}
+	public Iterator getIns()
+	{
+		return new hehe();
+	}
+
+}
+method(new MyRongqi());
+public void method(Collection coll)
+{
+	Iterator it = coll.getIns():
+}
+
+ MyRongqi2.hehe a = new MyRongqi2().getIns();
+
+ Iterator it = new MyRongqi2().getIns();
+
+7，集合中常见的两个子体系及特点？
+
+8，List体系中的常见的特性方法？
+
+9，List中的常见的子类对象，以及它们的特点？
+
+
+
+练习：动手：
+
+自定义Person对象。
+将多个Person对象存储到集合中。
+并取出。打印Person的姓名和年龄.
+
+
+明天预习 ：linkedlist特有方法。  栈，队列。
+
+Set集合。HashSet，TreeSet
+
+
+集合类的由来：
+	对象用于封装特有数据，对象多了需要存储，如果对象的个数不确定。
+	就使用集合容器进行存储。
+
+集合特点：
+1，用于存储对象的容器。
+2，集合的长度是可变的。
+3，集合中不可以存储基本数据类型值。
+
+
+
+集合容器因为内部的数据结构不同，有多种具体容器。
+不断的向上抽取，就形成了集合框架。
+
+框架的顶层Collection接口：
+
+Collection的常见方法：
+
+1，添加。
+	boolean add(Object obj):
+	boolean addAll(Collection coll):
+
+
+2，删除。
+	boolean remove(object obj):
+	boolean removeAll(Collection coll);
+	void clear();
+
+3，判断：
+	boolean contains(object obj):
+	boolean containsAll(Colllection coll);
+	boolean isEmpty():判断集合中是否有元素。
+
+4，获取：
+	int size():
+	Iterator iterator():取出元素的方式：迭代器。
+	该对象必须依赖于具体容器，因为每一个容器的数据结构都不同。
+	所以该迭代器对象是在容器中进行内部实现的。
+	对于使用容器者而言，具体的实现不重要，只要通过容器获取到该实现的迭代器的对象即可，
+	也就是iterator方法。
+
+	Iterator接口就是对所有的Collection容器进行元素取出的公共接口。
+	其实就是抓娃娃游戏机中的夹子！
+
+
+5，其他：
+	boolean retainAll(Collection coll);取交集。
+	Object[] toArray():将集合转成数组。
+
+
+-------------------------------
+Collection
+	|--List：有序(存入和取出的顺序一致),元素都有索引(角标)，元素可以重复。
+	|--Set：元素不能重复,无序。
+
+
+List:特有的常见方法：有一个共性特点就是都可以操作角标。
+
+1，添加
+	void add(index,element);
+	void add(index,collection);
+
+
+2，删除；
+	Object remove(index):
+
+
+3，修改：
+	Object set(index,element);
+
+
+4，获取：
+	Object get(index);
+	int indexOf(object);
+	int lastIndexOf(object);
+	List subList(from,to);
+
+
+list集合是可以完成对元素的增删改查。
+
+
+List:
+	|--Vector:内部是数组数据结构，是同步的。增删，查询都很慢！
+	|--ArrayList:内部是数组数据结构，是不同步的。替代了Vector。查询的速度快。
+	|--LinkedList:内部是链表数据结构，是不同步的。增删元素的速度很快。
+
+
+
+
+作业：
+1，自己去查文档演示Vector中的elements()方法。
+
+2，LinkedList中的，addFirst addLast getFirst，getLast  removeFirst removeLast。
+
+3，既然集合是存储对象的，请定义ArryaList集合，并存储Person对象。如new Person("lisi",20);
+并取出。将姓名和年龄打印出来。
+
+
+## day17
+
 
 
 

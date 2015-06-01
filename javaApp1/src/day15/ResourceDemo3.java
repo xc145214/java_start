@@ -1,4 +1,4 @@
-package day14;
+package day15;
 
 class Resource {
     private String name;

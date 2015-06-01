@@ -1,4 +1,4 @@
-package day14;
+package day15;
 
 /*
 jdk1.5以后将同步和锁封装成了对象。
