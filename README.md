@@ -1,2 +1,5 @@
 # java_start
-code from java start
+
+====
+
+learn java 25 day
